@@ -1,0 +1,8 @@
+xmu\config\SpringMvcConfig.class
+xmu\config\ServletContainersInitConfig.class
+xmu\config\SpringMvcSupport.class
+xmu\controller\BookController.class
+xmu\domain\Book.class
+xmu\BookController2.class
+xmu\domain\User.class
+xmu\controller\UserController.class

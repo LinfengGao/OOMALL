@@ -5,17 +5,21 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 import javax.servlet.Filter;
 
-public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class ServletConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+    //加载Spring的配置类
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return new Class[]{SpringConfig.class};
     }
 
+    //加载SpringMVC配置类
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class[]{SpringMvcConfig.class};
     }
 
+    //拦截所有请求
     @Override
     protected String[] getServletMappings() {
         return new String[]{"/"};

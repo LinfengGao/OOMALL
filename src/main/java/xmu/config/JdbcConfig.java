@@ -18,8 +18,8 @@ public class JdbcConfig {
     private String password;
 
     @Bean
-    public DataSource dataSource(){
-        DruidDataSource dataSource=new DruidDataSource();
+    public DataSource dataSource() {
+        DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(driver);
         dataSource.setUrl(url);
         dataSource.setUsername(username);
@@ -27,3 +27,9 @@ public class JdbcConfig {
         return dataSource;
     }
 }
+/*
+Caused by: java.lang.reflect.InaccessibleObjectException:
+Unable to make field private final java.lang.ClassLoader sun.rmi.transport.Target.ccl accessible:
+module java.rmi does not "opens sun.rmi.transport" to unnamed module @1a22e0ef
+
+ */
